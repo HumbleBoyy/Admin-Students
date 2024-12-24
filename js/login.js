@@ -16,7 +16,7 @@ elLoginForm.addEventListener("submit", (e)=> {
         setTimeout(()=> {
             elFormBtn.innerHTML = `SIGN IN`
             localStorage.setItem("user", JSON.stringify(userData))
-            location.pathname = "./index.html"
+            location.pathname = "./mainPage.html"
         },1000)
     }else{
         setTimeout(()=> {
