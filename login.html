@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Main Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+</head>
+<body class="flex justify-center items-center bg-yellow-500">
+    
+    <div class="block mx-auto w-[475px] h-[550px] bg-slate-100 rounded-2xl mt-20">
+        <div class="flex flex-col py-10">
+            <div class="flex justify-center items-center gap-3">
+                <span class="bg-yellow-500 w-[5px] h-[30px]"></span>
+                <h1 class="text-[32px] font-bold leading-[30px]">Admin Students</h1>
+            </div>
+            <div class="flex justify-center flex-col items-center mt-10 gap-2">
+                <h2 class="text-[22px] font-bold leading-[25px]">Sign In</h2>
+                <p class="text-[15px] leading-[17px]">Enter your credentials to access your account</p>
+            </div>
+        </div>
+        <form class="login_form flex flex-col w-[475px] justify-center p-5 gap-3">
+            <label class="text-[#6C6C6C] text-[15px] leading-[17px] font-semibold">Login</label>
+            <input required name="username" type="text" placeholder="Enter your login" class="w-full h-[45px] border-[1px] outline-none bg-[#EE5E5] p-5 text-[#CDCCD] text-[15px]">
+            <label class="text-[#6C6C6C] text-[15px] leading-[17px] font-semibold">Password</label>
+            <input required name="password" type="password" placeholder="Enter your password" class="w-full h-[45px] border-[1px] outline-none bg-[#EE5E5] p-5 text-[#CDCCD] text-[15px]">
+            <button type="submit" class="form_btn w-full bg-[#FEAF00] h-[45px] text-white flex justify-center items-center">SIGN IN</button>
+        </form>
+    </div>
+
+    <script src="./js/login.js"></script>
+</body>
+</html>

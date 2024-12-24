@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+}
+
+
+.error_warning{
+    background-color: crimson !important;
+}
