@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main Page</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -19,6 +20,47 @@
       </script>
 </head>
 <body>
-    <h2>Main Page</h2>
+    <main>
+        <div class="flex items-center">
+           <div class="w-[20%] h-[100vh] bg-[#F2EAE1] p-10">
+              <div class="flex gap-2">
+                <span class="bg-yellow-500 w-[5px] h-[30px]"></span>
+                <h1 class="text-[25px] font-bold leading-[30px]">Admin Students</h1>
+              </div>
+
+              <div class="flex justify-center flex-col items-center mt-10">
+                  <label class="cursor-pointer">
+                      <input type="file" class="hidden">
+                      <img src="./images/example.jpg" alt="exampleimage" width="150" height="150" class="rounded-[50%]">
+                  </label>
+                  <div class="flex flex-col text-center gap-3">
+                    <h2 class="admin_name font-bold leading-[20px] text-[25px] mt-5"></h2>
+                    <strong class="font-semibold  text-[20px] text-[#FEAF00]">Admin</strong>
+                    <button class="w-[195px] h-[40px] rounded-md bg-[#FEAF00] mt-10 text-[15px] font-semibold"><i class="fa-solid fa-graduation-cap"></i> Student</button>
+                  </div>
+
+                  <button onclick="handleLogut()" class="flex items-center gap-5 text-[20px] mt-60">Logout <i class="fa-solid fa-right-from-bracket"></i></button>
+              </div>
+           </div>
+           <div class="w-[80%] h-[100vh]">
+               <header class="bg-[#F2EAE1] w-full sticky top-0 h-[80px] p-5">
+                   <div class="flex justify-between items-center">
+                        <button class="text-[25px]"><i class="fa-solid fa-square-caret-left"></i></button>
+
+                        <div class="flex items-center gap-2">
+                          <form class="bg-white p-3 rounded-2xl">
+                            <input type="text" placeholder="Search...." class="w-[255px] h-[30px] text-[20px] outline-none">
+                            <button type="submit"><i class="fa-solid fa-magnifying-glass text-[20px] text-slate-500"></i></button>
+                          </form>
+                          <button class="text-[25px]"><i class="fa-regular fa-bell"></i></button>
+                        </div>
+                   </div>
+               </header>
+           </div>
+        </div>
+    </main>
+
+
+    <script src="./js/mainPage.js"></script>
 </body>
 </html>
