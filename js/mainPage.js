@@ -141,7 +141,7 @@ function handleEdit(id){
         <form class="edit_form flex flex-col justify-center gap-5">
               <label class="block  mx-auto w-[400px]">
                   <input type="file" class="input_file_edit hidden">
-                  <img src="${res.data.image}" alt="altImage" width="400" height="200" class="image_Edit w-full">
+                  <img src="${res.data.image}" alt="altImage" width="400" height="200" class="image_Edit error_image w-full">
               </label>
 
               <div>
@@ -186,6 +186,11 @@ function handleEdit(id){
             e.target.reset()
         })
     })
+
+    let elErrorImage = document.querySelector(".error_image")
+    elErrorImage.addEventListener("error", (e)=> {
+      e.target.src = "./images/imageD.png"
+   })
 }
 // Edit Partd end
 

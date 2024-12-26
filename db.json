@@ -35,6 +35,15 @@
       "enrollNumber": "12312323123",
       "dateAdmisson": "26.12.2024",
       "image": "blob:http://127.0.0.1:5500/21436ad2-91e5-43ef-935f-921f579af18f"
+    },
+    {
+      "id": "63b3",
+      "username": "Johnasdasd",
+      "email": "John@gmail.com",
+      "phone": "+998942360037",
+      "enrollNumber": "12432525135",
+      "dateAdmisson": "26.12.2024",
+      "image": "blob:http://127.0.0.1:5500/9423fcb0-8c31-47bd-89d5-8abb9f464356"
     }
   ]
 }
