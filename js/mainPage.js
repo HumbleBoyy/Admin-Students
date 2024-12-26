@@ -20,9 +20,9 @@ function handleAddBtn(){
 
     elModalInner.innerHTML = `
         <form class="addStudents flex flex-col justify-center gap-5">
-              <label class="block  mx-auto w-[200px]">
+              <label class="block  mx-auto w-[400px]">
                   <input type="file" class="input_file hidden">
-                  <img src="./images/example.jpg" alt="altImage" width="200" height="200" class="image w-full">
+                  <img src="./images/imageD.png" alt="altImage" width="400" height="200" class="image w-full">
               </label>
 
               <div>
@@ -48,7 +48,7 @@ function handleAddBtn(){
         elImage.src = URL.createObjectURL(e.target.files[0])
     })
 
-    let elStudentsForm = document.querySelector(".addStudents")
+    const elStudentsForm = document.querySelector(".addStudents")
 
     elStudentsForm.addEventListener("submit", (e)=> {
         e.preventDefault()
@@ -60,7 +60,6 @@ function handleAddBtn(){
             dateAdmisson:e.target.dateAdmisson.value,
             image:elImage.src
         }
-        console.log(studentsData)
 
         axios.post(HTTP, data).then(res => {
             alert("Success")
@@ -74,7 +73,7 @@ function handleAddBtn(){
 function renderUsers(list){
     axios.get(HTTP)
     .then(res => {
-        res.data.map((item, index) => {
+        res.data.map((item) => {
             let elTr = document.createElement("tr")
             elTr.className = "bg-slate-100 w-full p-5 rounded-md"
             elTr.innerHTML = `
@@ -86,8 +85,8 @@ function renderUsers(list){
                            <td class="py-[7px] text-[15px] leading-[17px]">${item.dataAdmisson}</td>
                            <td class="py-[7px] leading-[17px]">
                            <button class="text-[25px] text-[#FEAF00] mr-3"><i class="fa-solid fa-circle-info"></i></button>
-                           <button class="text-[25px] text-[#FEAF00] mr-3"><i class="fa-solid fa-pen-to-square"></i></button>
-                           <button class="text-[25px] text-[#FEAF00] mr-3"><i class="fa-solid fa-trash"></i></button>
+                           <button onclick="handleEdit('${item.id}')" class="text-[25px] text-[#FEAF00] mr-3"><i class="fa-solid fa-pen-to-square"></i></button>
+                           <button onclick="handleDelete('${item.id}')" class="text-[25px] text-[#FEAF00] mr-3"><i class="fa-solid fa-trash"></i></button>
                 </td>
             `
             list.append(elTr)
@@ -100,10 +99,81 @@ renderUsers(elStudentsList)
 
 
 
+// Delete Function start
+function handleDelete(id){
+    axios.delete(`${HTTP}/${id}`)
+}
+// Delete Function start
+
+
+
+// Edit Part start
+function handleEdit(id){
+    elModalWrapper.classList.remove("scale-0")
+
+    axios.get(`${HTTP}/${id}`)
+    .then(res => {
+        elModalInner.innerHTML = `
+        <form class="edit_form flex flex-col justify-center gap-5">
+              <label class="block  mx-auto w-[400px]">
+                  <input type="file" class="input_file hidden">
+                  <img src="./images/imageD.png" alt="altImage" width="400" height="200" class="image w-full">
+              </label>
+
+              <div>
+                <label  class="text-[20px] text-slate-500 font-bold">Name</label>
+                <input value="${res.data.username}" required type="text" name="username" placeholder="Name" class="w-full h-[50px] rounded-md text-[20px] p-2 border-[2px] outline-none focus:border-yellow-500">
+                <label class="text-[20px] text-slate-500 font-bold">Email</label>
+                <input value="${res.data.email}" required type="email" name="email" placeholder="Email" class="w-full border h-[50px] rounded-md text-[20px] p-2 border-[2px] outline-none focus:border-yellow-500">
+                <label class="text-[20px] text-slate-500 font-bold">Phone</label>
+                <input value="${res.data.phone}" required type="tel" name="phone" placeholder="Phone" class="w-full border h-[50px] rounded-md text-[20px] p-2 border-[2px] outline-none focus:border-yellow-500">
+                <label class="text-[20px] text-slate-500 font-bold">Enroll Number</label>
+                <input value="${res.data.enrollNumber}" required type="number" name="enrollNumber" placeholder="Enroll Number" class="w-full border h-[50px] rounded-md text-[20px] p-2 border-[2px] outline-none focus:border-yellow-500">
+                <label class="text-[20px] text-slate-500 font-bold">Date admission</label>
+                <input value="${res.data.dateAdmisson}" type="date" name="dateAdmisson" placeholder="Date admission" class="w-full border h-[50px] rounded-md text-[20px] p-2 border-[2px] outline-none focus:border-yellow-500">
+              </div>
+              <button type="submit" class="addBtn w-full bg-yellow-500 h-[50px] rounded-xl font-bold text-white text-[20px]">Edit</button>
+           </form>
+    `
+    })
+    
+
+    let elInputFile = document.querySelector(".dateAdmisson")
+    let elImage = document.querySelector(".image")
+
+    elInputFile.addEventListener("change", (e)=> {
+        elImage.src = URL.createObjectURL(e.target.files[0])
+    })
+
+    const elStudentsForm = document.querySelector(".edit_form")
+
+    elStudentsForm.addEventListener("submit", (e)=> {
+        e.preventDefault()
+        const editdata = {
+            id:id,
+            username:e.target.username.value,
+            email:e.target.email.value,
+            phone:e.target.phone.value,
+            enrollNumber:e.target.enrollNumber.value,
+            dateAdmisson:e.target.dateAdmisson.value,
+            image:elImage.src
+        }
+
+        axios.put(HTTP, editdata).then(res => {
+            alert("Success")
+            e.target.reset()
+        })
+    })
+}
+
+// Edit Partd end
 
 
 // Logout function start
 function handleLogut(){
-    location.pathname = "./index.html"
+    localStorage.removeItem("user")
+    setTimeout(()=> {
+        location.pathname = "./index.html"
+    },1000)
 }
 // Logout function end
