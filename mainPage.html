@@ -59,7 +59,7 @@
                      <h2 class="text-[22px] leading-[26px] font-bold">Students List</h2>
                      <div class="flex items-center gap-5">
                         <button class="text-[25px] text-yellow-500"><i class="fa-solid fa-sort"></i></button>
-                        <button class="w-[200px] h-[45px] rounded-md bg-[#FEAF00] text-white">ADD NEW STUDENT</button>
+                        <button onclick="handleAddBtn()" class="w-[200px] h-[45px] rounded-md bg-[#FEAF00] text-white">ADD NEW STUDENT</button>
                      </div>
                </div>
                <hr>
@@ -78,20 +78,20 @@
                     </tr>
                   </thead>
           
-                  <tbody class="orderedProducts_wrapper">
-                        <tr class="bg-slate-100 w-full p-5 rounded-md">
+                  <tbody class="students_list">
+                        <!-- <tr class="bg-slate-100 w-full p-5 rounded-md">
                            <td class="py-[7px]"><img src="./images/example.jpg" alt="altImage" width="65" height="55" class="rounded-md"></td>
                            <td class="py-[7px] text-[15px] leading-[17px]"><strong>Asadulloh</strong></td>
                            <td class="py-[7px] text-[15px] leading-[17px]">Asadulloh@gmail.com</td>
                            <td class="py-[7px] text-[15px] leading-[17px]">+998942360036</td>
                            <td class="py-[7px] text-[15px] leading-[17px]">1234567305477760</td>
-                           <td class="py-[7px] text-[15px] leading-[17px]">1234567305477760</td>
+                           <td class="py-[7px] text-[15px] leading-[17px]">08-Dec, 2021</td>
                            <td class="py-[7px] leading-[17px]">
                              <button class="text-[25px] text-[#FEAF00] mr-3"><i class="fa-solid fa-circle-info"></i></button>
                              <button class="text-[25px] text-[#FEAF00] mr-3"><i class="fa-solid fa-pen-to-square"></i></button>
                              <button class="text-[25px] text-[#FEAF00] mr-3"><i class="fa-solid fa-trash"></i></button>
                            </td>
-                        </tr>
+                        </tr> -->
                   </tbody>
               </table>
                </div>
@@ -100,6 +100,13 @@
     </main>
 
 
+    <div id="wrapper" class="modal_wrapper fixed inset-0 bg-[#00000790] flex items-center justify-center scale-0">
+      <div class="modal_inner w-[800px] rounded-md bg-white p-5">
+          
+      </div>
+   </div>
+
+   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./js/mainPage.js"></script>
 </body>
 </html>

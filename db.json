@@ -1,0 +1,31 @@
+{
+    "students": [
+      {
+        "id": "5af8",
+        "username": "Asadulloh",
+        "email": "asadulloh@gmail.com",
+        "phone": "+998942360036",
+        "enrollNumber": "111292921922",
+        "dataAdmisson": "28-Dec,2021",
+        "image":""
+      },
+      {
+        "id": "5af8",
+        "username": "Asadulloh",
+        "email": "asadulloh@gmail.com",
+        "phone": "+998942360036",
+        "enrollNumber": "111292921922",
+        "dataAdmisson": "28-Dec,2021",
+        "image":""
+      },
+      {
+        "id": "5af8",
+        "username": "Asadulloh",
+        "email": "asadulloh@gmail.com",
+        "phone": "+998942360036",
+        "enrollNumber": "111292921922",
+        "dataAdmisson": "28-Dec,2021",
+        "image":""
+      }
+    ]
+  }
