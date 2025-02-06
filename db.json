@@ -1,49 +1,13 @@
 {
   "students": [
     {
-      "id": "ae1d",
-      "username": "John",
-      "email": "John@gmail.com",
-      "phone": "+998 (94) 236-00-36",
-      "enrollNumber": "1222421525134523",
-      "dateAdmisson": "26.12.2024",
-      "image": "blob:http://127.0.0.1:5500/2680fe5e-5556-401f-92d1-fbd40fc4ebc6"
-    },
-    {
-      "id": "51f4",
-      "username": "John",
-      "email": "John@gmail.com",
-      "phone": "1231232113",
-      "enrollNumber": "123111111111111",
-      "dateAdmisson": "26.12.2024",
-      "image": "blob:http://127.0.0.1:5500/538387db-60dc-4ba7-a533-53b2ddd84459"
-    },
-    {
-      "id": "9cc0",
-      "username": "Merry",
-      "email": "John@gmail.com",
-      "phone": "+998 (942) 36-00-36",
-      "enrollNumber": "21432534632412421",
-      "dateAdmisson": "26.12.2024",
-      "image": "blob:http://127.0.0.1:5500/b34699a3-a6cd-4a84-a079-8e3da3d288f3"
-    },
-    {
-      "id": "5442",
+      "id": "62c9",
       "username": "Asadulloh",
-      "email": "asadulloh@gmail.com",
-      "phone": "+998 (942) 36-00-36",
-      "enrollNumber": "12312323123",
-      "dateAdmisson": "26.12.2024",
-      "image": "blob:http://127.0.0.1:5500/21436ad2-91e5-43ef-935f-921f579af18f"
-    },
-    {
-      "id": "63b3",
-      "username": "Johnasdasd",
-      "email": "John@gmail.com",
-      "phone": "+998942360037",
-      "enrollNumber": "12432525135",
-      "dateAdmisson": "26.12.2024",
-      "image": "blob:http://127.0.0.1:5500/9423fcb0-8c31-47bd-89d5-8abb9f464356"
+      "email": "email@email",
+      "phone": "+998 (94) 236-00-36",
+      "enrollNumber": "3432432432423424324",
+      "dateAdmisson": "6.2.2025",
+      "image": "blob:http://localhost:5500/3befc1a3-172a-4702-befe-b49d72edd19c"
     }
   ]
 }

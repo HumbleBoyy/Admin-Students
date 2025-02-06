@@ -5,7 +5,7 @@ let elFormBtn = document.querySelector(".form_btn")
 elLoginForm.addEventListener("submit", (e)=> {
     e.preventDefault()
 
-    elLoginForm.r
+
     const userData = {
         username: e.target.username.value,
         password: e.target.password.value
